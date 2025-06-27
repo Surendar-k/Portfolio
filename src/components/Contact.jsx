@@ -43,14 +43,14 @@ const Contact = () => {
               {
                 icon: <FaLinkedin className="text-violet-400 text-xl" />,
                 label: 'LinkedIn',
-                value: 'linkedin.com/in/surendar',
-                href: 'https://linkedin.com/in/surendar',
+                value: 'linkedin.com/in/k-surendar',
+                href: 'https://www.linkedin.com/in/k-surendar/',
               },
               {
                 icon: <FaGithub className="text-violet-400 text-xl" />,
                 label: 'GitHub',
-                value: 'github.com/surendar',
-                href: 'https://github.com/surendar',
+                value: 'github.com/Surendar-k',
+                href: 'https://github.com/Surendar-k',
               },
             ].map((item, idx) => (
               <div
