@@ -75,20 +75,20 @@ const About = () => {
             <div className="space-y-3 text-white/80 text-sm">
               <div>
                 <h4 className="text-white font-medium">B.Tech – IT</h4>
-                <p className="text-white/60">RMD Engineering College (2021 – 2025)</p>
+                <p className="text-white/60">RMK Engineering College (2022 – 2026)</p>
               </div>
               <div>
                 <h4 className="text-white font-medium">HSC – Class XII</h4>
-                <p className="text-white/60">Sacred Heart Hr. Sec. School (2020 – 2021)</p>
+                <p className="text-white/60">Sishya Matric Hr. Sec. School (2020 – 2021)</p>
               </div>
               <div>
                 <h4 className="text-white font-medium">SSLC – Class X</h4>
-                <p className="text-white/60">Sacred Heart Hr. Sec. School (2018 – 2019)</p>
+                <p className="text-white/60">Sishya Matric Hr. Sec. School (2018 – 2019)</p>
               </div>
               {/* Resume Button */}
           <div className="w-full pt-2">
             <a
-              href="/resume.pdf"
+              href="../assets/resume/Surendar_K_Resume 2025.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full text-center bg-white text-violet-700 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-violet-100 transition"
