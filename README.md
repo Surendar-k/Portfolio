@@ -1,4 +1,4 @@
-# 🌐 Surendar K's Developer Portfolio
+# 🌐 Surendar K - Developer Portfolio
 
 Welcome to my personal portfolio website built with **React** and **Vite**. This project showcases my skills, experience, and selected projects in a modern, responsive web layout. It also includes a contact form for connecting with me directly.
 
