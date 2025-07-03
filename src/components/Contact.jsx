@@ -74,21 +74,12 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <form
-  action="https://api.web3forms.com/submit"
+  <form
+  action="https://formspree.io/f/mvgrywyz"
   method="POST"
   className="bg-white/5 p-6 rounded-xl shadow-lg backdrop-blur-sm border border-white/10 space-y-5"
 >
-  {/* Hidden Access Key for Web3Forms */}
- <input type="hidden" name="access_key" value="8cf5f43e-3acf-450d-a470-1627530f3430" />
-
-  {/* Optional: Redirect after submission */}
-  <input
-    type="hidden"
-    name="redirect"
-    value="https://web3forms.com/success"
-  />
-
+  {/* Name Input */}
   <div className="flex items-center border-b border-white/20 py-2 hover:scale-[1.01] transition">
     <FaUser className="text-violet-300 mr-3" />
     <input
@@ -100,6 +91,7 @@ const Contact = () => {
     />
   </div>
 
+  {/* Email Input */}
   <div className="flex items-center border-b border-white/20 py-2 hover:scale-[1.01] transition">
     <FaEnvelope className="text-violet-300 mr-3" />
     <input
@@ -111,6 +103,7 @@ const Contact = () => {
     />
   </div>
 
+  {/* Message Box */}
   <div className="flex items-start border-b border-white/20 py-2 hover:scale-[1.01] transition">
     <FaCommentDots className="text-violet-300 mt-1 mr-3" />
     <textarea
@@ -122,6 +115,7 @@ const Contact = () => {
     ></textarea>
   </div>
 
+  {/* Submit Button */}
   <button
     type="submit"
     className="w-full bg-violet-600 hover:bg-violet-700 transition text-white font-semibold py-3 px-4 rounded-full shadow-lg"
@@ -129,6 +123,7 @@ const Contact = () => {
     ✉️ Send Message
   </button>
 </form>
+
 
         </div>
       </div>
