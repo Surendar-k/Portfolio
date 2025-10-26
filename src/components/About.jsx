@@ -88,8 +88,8 @@ const About = () => {
               {/* Resume Button */}
           <div className="w-full pt-2">
             <a
-              href="../assets/resume/Surendar_K_Resume 2025.pdf"
-              target="_blank"
+              href="https://drive.google.com/file/d/1GYYz-5R3yfUfzOJX_47eOZHZCGPnwCP1/view?usp=sharing"
+              target="https://drive.google.com/file/d/1GYYz-5R3yfUfzOJX_47eOZHZCGPnwCP1/view?usp=sharing"
               rel="noopener noreferrer"
               className="block w-full text-center bg-white text-violet-700 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-violet-100 transition"
             >
