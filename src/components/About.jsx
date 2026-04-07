@@ -118,7 +118,7 @@ const About = () => {
             <h3 className="text-xl font-semibold text-violet-300 mb-4 flex items-center gap-2">
               <FaGraduationCap className="text-lg" /> Skills
             </h3>
-            <div className="grid grid-cols-4 gap-4 text-center text-white">
+            <div className="grid grid-cols-5 gap-10 text-center text-white">
               {[
                 { icon: <FaHtml5 className="text-orange-500 text-2xl" />, name: 'HTML5' },
                 { icon: <FaCss3Alt className="text-blue-500 text-2xl" />, name: 'CSS3' },
@@ -132,7 +132,7 @@ const About = () => {
                 { icon: <SiFirebase className="text-yellow-500 text-2xl" />, name: 'Firebase' },
                 { icon: <SiGooglecloud className="text-blue-300 text-2xl" />, name: 'GCloud' },
                 { icon: <SiNetlify className="text-green-400 text-2xl" />, name: 'Netlify' },
-                { icon: <SiGooglemaps className="text-red-400 text-2xl" />, name: 'Maps API' },
+                // { icon: <SiGooglemaps className="text-red-400 text-2xl" />, name: 'Maps API' },
               ].map((skill, index) => (
                 <div key={index} className="flex flex-col items-center">
                   {skill.icon}

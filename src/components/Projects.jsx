@@ -8,26 +8,33 @@ import mcqgame from "../assets/mcqgameproj.png";
 import profuel from "../assets/profuelproj.png";
 import todolist from "../assets/todolistproj.png";
 import tyrewhizz from "../assets/tyrewhizzproj.png";
-
+import rmkzapout from "../assets/rmkzapoutproj.png";
 const Projects = () => {
   const projectList = [
     {
       title: "CoffeeSpot Web App",
-      desc: "A full-stack coffee ordering platform using React, Node.js, MySQL. Includes order, billing, and customer rewards.",
+     desc: "A full-stack coffee ordering platform built with React, Node.js, and MySQL, featuring real-time order management, automated billing system, and a customer rewards program to enhance user engagement and streamline café operations.",
       img: coffeeproj,
       repo: "https://github.com/Surendar-k/Retrocoffeeshop",
       site: "https://caffeeespot.web.app/",
     },
      {
-      title: "Icon Edu Site",
-      desc: "An educational website landing page with animated features using modern UI design.",
+      title: "RMK Zapout",
+     desc: "A full-stack smart gate pass and On-Duty (OD) management system designed for colleges. It enables students to apply digitally for gate passes and OD requests, with a multi-level approval workflow for staff. The system sends real-time WhatsApp notifications to parents with detailed updates, ensuring transparency, security, and efficient campus management.",
+      img: rmkzapout,
+      repo: "https://github.com/Surendar-k/RMK-ZapOut",
+      site: "https://rmkzapout.web.app/",
+    },
+     {
+      title: "Icon School Education Site",
+      desc: "Designed and developed a freelance educational website landing page with modern UI/UX and smooth animations, delivering a responsive and visually engaging experience for improved user interaction.",
       img: iconEdu,
       repo: "https://github.com/Surendar-k/icon-edu-site",
       site: "https://icon-edu-site.web.app/",
     },
     {
-      title: "ProFuel - Fuel Management App",
-      desc: "Fuel station management app prototype with billing, tracking, and inventory system.",
+      title: "ProFuel - Healthy Food E-Commerce Website",
+      desc: "Developed a freelance nutrition-focused web application for selling protein and healthy food products, featuring a modern UI, product catalog, and user-friendly browsing experience tailored for fitness-conscious customers.",
       img: profuel,
       repo: "https://github.com/Surendar-k/Profuel",
       site: "https://surendar-k.github.io/Profuel/",
@@ -99,7 +106,9 @@ const Projects = () => {
 
               {/* Content */}
               <div className="p-5">
-                <h3 className="text-2xl font-semibold text-violet-300 mb-2">{p.title}</h3>
+               <h3 className="text-xl font-semibold text-violet-300 mb-2 leading-snug break-words">
+  {p.title}
+</h3>
                 <p className="text-white/80 mb-4 text-sm leading-relaxed">{p.desc}</p>
 
                 <div className="flex items-center gap-6">
