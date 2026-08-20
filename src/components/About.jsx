@@ -18,7 +18,6 @@ import {
   FaJsSquare,
   FaReact,
   FaNodeJs,
-  FaDatabase,
   FaGitAlt,
 } from 'react-icons/fa';
 import {
@@ -61,14 +60,12 @@ const About = () => {
     <section
       ref={containerRef}
       id="about"
-      className="relative py-24 px-4 sm:px-8 bg-[#080b11] text-slate-100 font-sans overflow-hidden"
+      className="relative py-24 px-3 sm:px-8 bg-[#080b11] text-slate-100 font-sans overflow-hidden w-full max-w-[100vw]"
     >
-
       {/* Background Ambient Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[36rem] h-[36rem] bg-indigo-600/10 rounded-full blur-[160px] pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto space-y-8">
-        
+      <div className="max-w-5xl mx-auto space-y-8 relative z-10">
         {/* Header */}
         <div className="text-center space-y-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
@@ -77,52 +74,53 @@ const About = () => {
           <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
             About Me
           </h2>
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-400 text-sm px-4">
             Inspect my profile details, tech capabilities, and academic history live below.
           </p>
         </div>
 
         {/* SIMULATED BROWSER WINDOW */}
-        <div className="browser-window rounded-2xl bg-[#0e131f] border border-slate-800 shadow-2xl overflow-hidden">
+        <div className="browser-window rounded-2xl bg-[#0e131f] border border-slate-800 shadow-2xl overflow-hidden w-full">
           
           {/* Top Address & Navigation Bar */}
-          <div className="bg-[#141a29] px-4 py-3 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3">
+          <div className="bg-[#141a29] p-3 sm:px-4 sm:py-3 border-b border-slate-800 flex flex-col gap-3">
             
-            {/* Window Dots & Tab Switcher */}
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-1.5">
+            {/* Window Dots & Wrapped Tabs */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 w-full">
+              <div className="flex items-center gap-1.5 shrink-0 px-1">
                 <span className="w-3 h-3 rounded-full bg-red-500/80 inline-block" />
                 <span className="w-3 h-3 rounded-full bg-yellow-500/80 inline-block" />
                 <span className="w-3 h-3 rounded-full bg-green-500/80 inline-block" />
               </div>
 
-              <div className="flex bg-[#0a0d14] p-1 rounded-lg border border-slate-800 text-xs font-mono">
+              {/* Flex Wrap applied here: Buttons stack or squeeze neatly without scrolling */}
+              <div className="flex flex-wrap bg-[#0a0d14] p-1 rounded-lg border border-slate-800 text-[11px] sm:text-xs font-mono w-full sm:w-auto gap-1">
                 <button
                   onClick={() => setActiveTab('overview')}
-                  className={`px-3 py-1 rounded transition-all ${
+                  className={`flex-1 sm:flex-none px-2 py-1.5 sm:px-3 sm:py-1 rounded transition-all text-center ${
                     activeTab === 'overview'
                       ? 'bg-indigo-600 text-white font-semibold'
-                      : 'text-slate-400 hover:text-white'
+                      : 'text-slate-400 hover:text-white hover:bg-white/5'
                   }`}
                 >
                   Overview.html
                 </button>
                 <button
                   onClick={() => setActiveTab('stack')}
-                  className={`px-3 py-1 rounded transition-all ${
+                  className={`flex-1 sm:flex-none px-2 py-1.5 sm:px-3 sm:py-1 rounded transition-all text-center ${
                     activeTab === 'stack'
                       ? 'bg-indigo-600 text-white font-semibold'
-                      : 'text-slate-400 hover:text-white'
+                      : 'text-slate-400 hover:text-white hover:bg-white/5'
                   }`}
                 >
                   TechStack.css
                 </button>
                 <button
                   onClick={() => setActiveTab('education')}
-                  className={`px-3 py-1 rounded transition-all ${
+                  className={`flex-1 sm:flex-none px-2 py-1.5 sm:px-3 sm:py-1 rounded transition-all text-center ${
                     activeTab === 'education'
                       ? 'bg-indigo-600 text-white font-semibold'
-                      : 'text-slate-400 hover:text-white'
+                      : 'text-slate-400 hover:text-white hover:bg-white/5'
                   }`}
                 >
                   Academic.json
@@ -131,15 +129,14 @@ const About = () => {
             </div>
 
             {/* URL Search Bar */}
-            <div className="flex-1 max-w-sm hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#0a0d14] border border-slate-800 text-xs font-mono text-slate-400">
-              <FaGlobe className="text-cyan-400" />
-              <span className="text-slate-200">https://surendar-k.dev/about/{activeTab}</span>
+            <div className="flex-1 w-full hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#0a0d14] border border-slate-800 text-xs font-mono text-slate-400">
+              <FaGlobe className="text-cyan-400 shrink-0" />
+              <span className="text-slate-200 truncate">https://surendar-k.dev/about/{activeTab}</span>
             </div>
-
           </div>
 
           {/* MAIN WORKSPACE CANVAS */}
-          <div className="p-6 sm:p-8 min-h-[460px] flex flex-col justify-between bg-[#0b0e17]">
+          <div className="p-4 sm:p-8 min-h-[460px] flex flex-col justify-between bg-[#0b0e17]">
             
             {/* TAB 1: OVERVIEW */}
             {activeTab === 'overview' && (
@@ -148,7 +145,7 @@ const About = () => {
                   <img
                     src={profileImage}
                     alt="Surendar K"
-                    className="w-32 h-32 rounded-2xl object-cover border-2 border-indigo-500/40 shadow-xl"
+                    className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover border-2 border-indigo-500/40 shadow-xl shrink-0"
                   />
                   <div className="space-y-2 text-center sm:text-left">
                     <span className="text-xs font-mono text-cyan-400 uppercase tracking-wider">
@@ -173,13 +170,13 @@ const About = () => {
                     { icon: <FaPhone className="text-indigo-400" />, label: 'Phone', value: '+91 94877 69772', href: 'tel:+919487769772' },
                   ].map((item, i) => (
                     <div key={i} className="p-3 rounded-xl bg-[#131926] border border-slate-800 flex items-center gap-3 text-xs">
-                      <div className="text-base">{item.icon}</div>
-                      <div>
+                      <div className="text-base shrink-0">{item.icon}</div>
+                      <div className="min-w-0">
                         <span className="text-slate-400 block text-[10px] uppercase font-mono">{item.label}</span>
                         {item.href ? (
-                          <a href={item.href} className="text-cyan-400 hover:underline font-semibold">{item.value}</a>
+                          <a href={item.href} className="text-cyan-400 hover:underline font-semibold truncate block">{item.value}</a>
                         ) : (
-                          <span className="text-white font-semibold">{item.value}</span>
+                          <span className="text-white font-semibold truncate block">{item.value}</span>
                         )}
                       </div>
                     </div>
@@ -213,8 +210,8 @@ const About = () => {
                       key={index}
                       className="p-3 rounded-xl bg-[#131926] border border-slate-800 flex items-center gap-3 text-xs hover:border-indigo-500/50 transition-colors"
                     >
-                      <div className="text-xl">{skill.icon}</div>
-                      <span className="font-bold text-white">{skill.name}</span>
+                      <div className="text-xl shrink-0">{skill.icon}</div>
+                      <span className="font-bold text-white truncate">{skill.name}</span>
                     </div>
                   ))}
                 </div>
@@ -229,7 +226,7 @@ const About = () => {
                 </h4>
                 <div className="space-y-3 text-xs">
                   <div className="p-4 rounded-xl bg-[#131926] border border-slate-800 space-y-1">
-                    <div className="flex justify-between text-indigo-300 font-bold">
+                    <div className="flex flex-col sm:flex-row sm:justify-between text-indigo-300 font-bold gap-1">
                       <span>B.Tech – Information Technology</span>
                       <span className="font-mono text-slate-400">2022 – 2026</span>
                     </div>
@@ -237,7 +234,7 @@ const About = () => {
                   </div>
 
                   <div className="p-4 rounded-xl bg-[#131926] border border-slate-800 space-y-1">
-                    <div className="flex justify-between text-indigo-300 font-bold">
+                    <div className="flex flex-col sm:flex-row sm:justify-between text-indigo-300 font-bold gap-1">
                       <span>HSC – Class XII</span>
                       <span className="font-mono text-slate-400">2020 – 2021</span>
                     </div>
@@ -245,7 +242,7 @@ const About = () => {
                   </div>
 
                   <div className="p-4 rounded-xl bg-[#131926] border border-slate-800 space-y-1">
-                    <div className="flex justify-between text-indigo-300 font-bold">
+                    <div className="flex flex-col sm:flex-row sm:justify-between text-indigo-300 font-bold gap-1">
                       <span>SSLC – Class X</span>
                       <span className="font-mono text-slate-400">2018 – 2019</span>
                     </div>
@@ -257,14 +254,14 @@ const About = () => {
 
             {/* Bottom Action Bar */}
             <div className="pt-6 mt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <span className="text-xs font-mono text-slate-400">
+              <span className="text-xs font-mono text-slate-400 text-center sm:text-left">
                 Open to freelance and internship opportunities.
               </span>
               <a
                 href="https://drive.google.com/file/d/1JtNP2QNa_4P6zQj1Fh44Idj0gB0fRPrd/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-600 text-white text-xs font-semibold hover:opacity-90 transition-all flex items-center gap-2 shadow-lg"
+                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-600 text-white text-xs font-semibold hover:opacity-90 transition-all flex items-center gap-2 shadow-lg shrink-0 w-full sm:w-auto justify-center"
               >
                 <FaFileDownload /> Download Resume
               </a>
