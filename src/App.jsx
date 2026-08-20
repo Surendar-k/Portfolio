@@ -8,12 +8,16 @@ import Services from "./components/Services";
 function App() {
   return (
     <div className="font-sans bg-white text-gray-800">
+      
       <Navbar />
+      
       <Hero />
+     
       <About />
       <Projects />
       <Services />
       <Contact />
+
     </div>
   );
 }
