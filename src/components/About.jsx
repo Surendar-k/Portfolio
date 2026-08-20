@@ -261,7 +261,7 @@ const About = () => {
                 Open to freelance and internship opportunities.
               </span>
               <a
-                href="https://drive.google.com/file/d/1GYYz-5R3yfUfzOJX_47eOZHZCGPnwCP1/view?usp=sharing"
+                href="https://drive.google.com/file/d/1JtNP2QNa_4P6zQj1Fh44Idj0gB0fRPrd/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-600 text-white text-xs font-semibold hover:opacity-90 transition-all flex items-center gap-2 shadow-lg"
