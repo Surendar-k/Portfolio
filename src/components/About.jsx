@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
-import profileImage from '../assets/profile.png';
+import profileImage from '../assets/profilects.png';
 import {
   FaGlobe,
   FaFileDownload,
