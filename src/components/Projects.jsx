@@ -13,6 +13,7 @@ import profuel from "../assets/profuelproj.png";
 import todolist from "../assets/todolistproj.png";
 import tyrewhizz from "../assets/tyrewhizzproj.png";
 import rmkzapout from "../assets/rmkzapoutproj.png";
+import tourgenieproj from "../assets/tourgenie.png";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -20,6 +21,14 @@ const Projects = () => {
   const containerRef = useRef(null);
 
   const projectList = [
+   {
+  title: "TourGenie - Tour Operations and Holiday Package Management System",
+  desc: "Full-stack tour management platform for managing holiday packages, tour operations, bookings,finance management and customer experiences.",
+  tags: ["React.ts", "Spring Boot", "MySQL", "REST API"],
+  img: tourgenieproj,
+  repo: "https://github.com/Surendar-k/TourGenie",
+  site: null,
+},
     {
       title: "CoffeeSpot Web App",
       desc: "Full-stack coffee ordering platform with real-time order management, automated billing, and customer rewards program.",
@@ -203,7 +212,7 @@ const Projects = () => {
                   </a>
                 ) : (
                   <span className="text-[11px] text-slate-500 font-mono italic">
-                    [ Internal IoT Build ]
+                    [ Not Deployed ]
                   </span>
                 )}
               </div>
