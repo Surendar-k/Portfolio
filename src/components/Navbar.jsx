@@ -60,18 +60,18 @@ const Navbar = () => {
   );
 
   return (
-    <header className="fixed top-4 left-0 right-0 z-50 px-4 max-w-6xl mx-auto font-mono">
+    <header className="fixed top-4 left-0 right-0 z-50 px-2 sm:px-4 max-w-6xl mx-auto font-mono">
       <nav
         ref={navRef}
-        className="relative bg-[#0d1117]/85 backdrop-blur-xl border border-cyan-500/20 shadow-[0_10px_30px_rgba(0,255,240,0.05)] px-4 sm:px-6 py-2.5 flex justify-between items-center rounded-2xl transition-all duration-300"
+        className="relative bg-[#0d1117]/85 backdrop-blur-xl border border-cyan-500/20 shadow-[0_10px_30px_rgba(0,255,240,0.05)] px-3 sm:px-6 py-2.5 flex justify-between items-center rounded-2xl transition-all duration-300 gap-2"
       >
         {/* Glow Line Top Accent */}
-        <div className="absolute top-0 left-10 right-10 h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-60" />
+        <div className="absolute top-0 left-10 right-10 h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-60 pointer-events-none" />
 
         {/* Brand / Logo */}
-        <a href="#home" className="flex items-center gap-2 group mr-2">
-          <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_10px_#22d3ee] animate-pulse" />
-          <span className="text-lg font-black tracking-wider text-white group-hover:text-cyan-400 transition-colors">
+        <a href="#home" className="flex items-center gap-1.5 group shrink-0">
+          <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-cyan-400 shadow-[0_0_10px_#22d3ee] animate-pulse" />
+          <span className="text-base sm:text-lg font-black tracking-wider text-white group-hover:text-cyan-400 transition-colors">
             SK<span className="text-cyan-400">.</span>
           </span>
         </a>
@@ -79,13 +79,13 @@ const Navbar = () => {
         {/* Interactive Terminal Command Input Bar */}
         <form
           onSubmit={handleCommandSubmit}
-          className={`flex items-center gap-2 bg-[#161b22]/90 px-3 py-1.5 rounded-xl border transition-all duration-300 ${
+          className={`flex items-center gap-1.5 bg-[#161b22]/90 px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border transition-all duration-300 flex-1 max-w-[200px] sm:max-w-xs ${
             error
               ? "border-red-500/80 shadow-[0_0_12px_rgba(239,68,68,0.3)]"
               : "border-cyan-500/30 focus-within:border-cyan-400 focus-within:shadow-[0_0_12px_rgba(34,211,238,0.25)]"
           }`}
         >
-          <FaTerminal className="text-cyan-400 text-xs shrink-0" />
+          <FaTerminal className="text-cyan-400 text-[10px] sm:text-xs shrink-0" />
           <span className="text-slate-500 text-xs font-bold hidden sm:inline">
             &gt;
           </span>
@@ -94,22 +94,22 @@ const Navbar = () => {
             value={command}
             onChange={(e) => setCommand(e.target.value)}
             placeholder={
-              error ? "Command not found!" : "Type 'projects' or 'contact'..."
+              error ? "Err!" : "Type section..."
             }
-            className={`bg-transparent outline-none text-xs w-36 sm:w-52 transition-colors ${
+            className={`bg-transparent outline-none text-[11px] sm:text-xs w-full min-w-0 transition-colors ${
               error ? "text-red-400 placeholder-red-400/70" : "text-cyan-300 placeholder-slate-500"
             }`}
           />
           <button
             type="submit"
-            className="text-[10px] bg-cyan-500/10 hover:bg-cyan-400 hover:text-black text-cyan-300 px-2 py-0.5 rounded border border-cyan-400/30 font-semibold transition-all"
+            className="text-[9px] sm:text-[10px] bg-cyan-500/10 hover:bg-cyan-400 hover:text-black text-cyan-300 px-1.5 sm:px-2 py-0.5 rounded border border-cyan-400/30 font-semibold transition-all shrink-0"
           >
             RUN
           </button>
         </form>
 
         {/* Desktop Quick Nav Links */}
-        <ul className="hidden lg:flex items-center gap-1 bg-[#161b22]/40 p-1 rounded-xl border border-white/5">
+        <ul className="hidden lg:flex items-center gap-1 bg-[#161b22]/40 p-1 rounded-xl border border-white/5 shrink-0">
           {navItems.map((item) => (
             <li key={item.name}>
               <a
@@ -123,13 +123,15 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile Toggle */}
-        <div
-          className="lg:hidden text-2xl cursor-pointer p-1.5 rounded-xl bg-[#161b22] border border-cyan-500/30 text-cyan-400 hover:text-white transition-all ml-2"
+        {/* Mobile Toggle Button */}
+        <button
+          type="button"
+          aria-label="Toggle Navigation"
+          className="lg:hidden text-xl sm:text-2xl cursor-pointer p-1.5 rounded-xl bg-[#161b22] border border-cyan-500/30 text-cyan-400 hover:text-white transition-all shrink-0 z-50"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <HiX /> : <HiMenuAlt3 />}
-        </div>
+        </button>
 
         {/* Mobile Dropdown */}
         {isOpen && (
